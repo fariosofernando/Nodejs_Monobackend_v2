@@ -1,0 +1,15 @@
+{
+  "name": "modular_backend",
+  "version": "1.0.0",
+  "description": "Explorando a construcao de um backend com node + express + lerna (para estrutura monorepo) + yarn workspaces. ",
+  "main": "main.ts",
+  "repository": "https://github.com/fariosofernando/Nodejs_Monobackend",
+  "author": "farioso.f@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.4"
+  },
+  "scripts": {
+    "start": "tsc && node dist/main"
+  }
+}
