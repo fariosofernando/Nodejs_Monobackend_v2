@@ -1,0 +1,10 @@
+{
+  "name": "auth_package",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
