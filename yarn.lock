@@ -773,6 +773,7 @@ asynckit@^0.4.0:
   version "1.0.0"
   resolved "file:packages/auth_package"
   dependencies:
+    database_package "file:../database_package"
     express "^4.19.2"
     jsonwebtoken "^9.0.2"
 
@@ -1269,6 +1270,10 @@ dargs@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/dargs/-/dargs-7.0.0.tgz"
   integrity sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==
+
+"database_package@file:../database_package", "database_package@file:/home/a_fernam/Documents/dev/swrk/modular_backend/packages/database_package":
+  version "1.0.0"
+  resolved "file:packages/database_package"
 
 dateformat@^3.0.3:
   version "3.0.3"
@@ -4586,6 +4591,8 @@ upath@2.0.1:
 "user_package@file:/home/a_fernam/Documents/dev/swrk/modular_backend/packages/user_package":
   version "1.0.0"
   resolved "file:packages/user_package"
+  dependencies:
+    database_package "file:../database_package"
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"

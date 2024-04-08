@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
+import { getUserById, getAllUsers } from "database_package/src/controller";
 
 // Função para registrar um novo usuário
 export const registerUser = (req: Request, res: Response): void => {

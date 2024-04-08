@@ -4,6 +4,7 @@
   "main": "src/main.ts",
   "license": "MIT",
   "dependencies": {
+    "database_package": "file:../database_package",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2"
   },

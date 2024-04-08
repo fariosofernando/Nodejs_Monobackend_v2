@@ -1,0 +1,35 @@
+a_fernam@Aurelio:~/Documents/dev/swrk/modular_backend$ tree -L 3
+├── LICENSE
+├── lerna.json
+├── node_modules
+│   ├── @babel
+│   │   ├── code-frame
+│   │   ├── helper-validator-identifier
+│   │   └── highlight
+│   ├── @hutson
+│   │   └── parse-repository-url
+│   ├── @isaacs
+│   │   └── cliui
+│   ├── @jest
+│   │   └── schemas
+│   ├── ...
+├── package-lock.json
+├── package.json
+├── packages
+│   ├── auth_package
+│   │   ├── dist
+│   │   ├── package.json
+│   │   ├── src
+│   │   └── tsconfig.json
+│   ├── database_package
+│   │   └── src
+│   └── user_package
+│       ├── dist
+│       ├── package.json
+│       ├── src
+│       └── tsconfig.json
+├── paths.txt
+├── tsconfig.json
+└── yarn.lock
+
+927 directories, 3041 files

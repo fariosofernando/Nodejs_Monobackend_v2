@@ -5,5 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "tsc &&PORT=3001 nodemon dist/main"
+  },
+  "dependencies": {
+    "database_package": "../database_package"
   }
 }
