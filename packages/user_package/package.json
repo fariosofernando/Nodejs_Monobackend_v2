@@ -1,0 +1,9 @@
+{
+  "name": "user_package",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc &&PORT=3001 nodemon dist/main"
+  }
+}
