@@ -1271,7 +1271,7 @@ dargs@^7.0.0:
   resolved "https://registry.npmjs.org/dargs/-/dargs-7.0.0.tgz"
   integrity sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==
 
-"database_package@file:../database_package", "database_package@file:/home/a_fernam/Documents/dev/swrk/modular_backend/packages/database_package":
+database_package@../database_package, "database_package@file:../database_package", "database_package@file:/home/a_fernam/Documents/dev/swrk/modular_backend/packages/database_package":
   version "1.0.0"
   resolved "file:packages/database_package"
 
