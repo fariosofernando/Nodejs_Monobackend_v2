@@ -1,3 +1,18 @@
-export function authenticateUser(username: string, password: string): boolean {
-	return username === "admin" && password === "123456";
-}
+import express from "express";
+import { authRouter } from "./routes";
+
+const app = express();
+
+// Middleware para permitir o parsing de JSON no corpo das requisições
+app.use(express.json());
+
+// Rotas de autenticação
+app.use("/auth", authRouter);
+
+// Porta em que o servidor irá escutar
+const PORT = process.env.PORT || 3000;
+
+// Iniciar o servidor Express
+app.listen(PORT, () => {
+	console.log(`Servidor Express rodando na porta ${PORT}`);
+});
