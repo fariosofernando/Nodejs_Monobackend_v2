@@ -1,38 +1,73 @@
-Para começar a desenvolver o backend, faça clone desse repositorio base ou crie a mesma estrutura que é assim : 
+Aqui está a documentação revisada para adicionar ao seu README:
 
-1. Criar a Estrutura do Monorepo:
-backend
-└── packages
+---
 
-E na pasta `packages`, é onde estarao todos os packages (modules) que podes desenvolver separadamente.
+## Guia de Desenvolvimento do Backend
 
-dentro da pasta `root`, ex; backend/, começe um projeto node. 
-Use o yarn init, ele irá criar um package.json: 
+Para começar a desenvolver o backend, siga as etapas abaixo:
 
-Configurar Yarn Workspaces:
+### 1. Clone do Repositório Base ou Crie a Estrutura Manualmente
 
-No seu arquivo package.json principal, você deve configurar Yarn Workspaces para que o Yarn saiba como lidar com os pacotes no monorepo. Por exemplo:
+Clone o repositório base ou crie manualmente a estrutura conforme descrito abaixo:
 
 ```
+backend
+└── packages
+```
+
+A pasta `packages` é onde todos os pacotes (módulos) estarão, permitindo que você desenvolva separadamente.
+
+### 2. Configuração do .gitignore
+
+Antes de tudo, dentro da pasta `packages`, crie um arquivo `.gitignore` com o seguinte conteúdo:
+
+```plaintext
+*
+!.gitignore
+```
+
+É importante garantir que nenhum desses pacotes seja incluído no controle de versão em conjunto na pasta `packages`.
+
+### 3. Inicialização do Projeto Node
+
+Dentro do diretório raiz (por exemplo, `backend/`), inicie um novo projeto Node usando `yarn init`. Isso criará um arquivo `package.json`.
+
+### 4. Configuração do Yarn Workspaces
+
+No seu arquivo `package.json` principal, configure Yarn Workspaces para lidar com os pacotes no monorepo. Adicione a seguinte configuração:
+
+```json
 {
   "private": true,
   "workspaces": ["packages/*"]
 }
 ```
 
-E para lidar com o genrencimento dos packages (modules), use o Lerna, uma ferramenta de código aberto que otimiza o gerenciamento de projetos com múltiplos pacotes. 
+### 5. Instalação do Lerna
 
-Instale ele
+Para gerenciar os pacotes (módulos), instale o Lerna, uma ferramenta de código aberto que otimiza o gerenciamento de projetos com múltiplos pacotes:
 
+```bash
 npm install -g lerna
+```
 
-E no diretorio root, ex: backend rode o `lerna init` para inicializar o Lerna.
-E para um criar um novo package ou module, no diretorio package, use o comando: 
+### 6. Inicialização do Lerna
 
+No diretório raiz (por exemplo, `backend/`), execute o comando `lerna init` para inicializar o Lerna.
+
+### 7. Criação de Novo Pacote ou Módulo
+
+Para criar um novo pacote ou módulo, vá para o diretório `packages` e use o comando:
+
+```bash
 lerna create nome-do-pacote
+```
 
-A estrutura basica de seu projeto, deve ser similar a esta: 
+### 8. Estrutura Básica do Projeto
 
+A estrutura básica do seu projeto deve ser semelhante a esta:
+
+```
 monorepo/
 ├── packages/
 │   ├── auth/
@@ -42,12 +77,18 @@ monorepo/
 │       ├── index.js
 │       └── databaseController.js
 └── package.json
+```
 
-Para cada pacote, você pode criar rotas unicas para cada uma delas e um server unico para cada um.
+Para cada pacote, você pode criar rotas únicas e um servidor único.
 
-Para compartinhar pacotes, você pode usar o comando: 
+### 9. Compartilhamento de Pacotes
 
-yarn add
+Para compartilhar pacotes entre os módulos, você pode usar o comando `yarn add`. Por exemplo, se você criou o pacote_1, no pacote_2 execute o comando:
 
-Por exemplo, você criou o pacote_1, e no pacote_2 rode o comando yarn add pacote_1
+```bash
+yarn add nome-do-pacote-1
+```
 
+---
+
+Siga estas etapas para configurar e desenvolver o backend usando a estrutura de monorepo com o Yarn Workspaces e o Lerna.
