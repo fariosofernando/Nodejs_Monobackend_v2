@@ -1,7 +1,3 @@
-Aqui está a documentação revisada para adicionar ao seu README:
-
----
-
 ## Guia de Desenvolvimento do Backend
 
 Para começar a desenvolver o backend, siga as etapas abaixo:
